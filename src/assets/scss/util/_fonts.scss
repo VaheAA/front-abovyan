@@ -1,7 +1,4 @@
-@font-face {
-  font-family: 'Coiny';
-  src: url('../fonts/Coiny-Regular.woff') format('woff'),
-    url('../fonts/Coiny-Regular.woff2') format('woff2');
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
-$font: 'Coiny';
+$fontRoboto: 'Roboto', sans-serif;
+$fontDm: 'DM Sans', sans-serif;

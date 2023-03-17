@@ -7,12 +7,332 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.min.css" />
   <script defer src="assets/js/app.min.js"></script>
-  <title>Document</title>
+  <title>Front-Abovyan</title>
 </head>
 
 <body>
-  <header class="header"></header>
-  <main class="main"></main>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <button class="hamburger">
+            <img src="./assets/img/icons/burger.svg" alt="">
+          </button>
+          <a href="/" class="logo">
+            <img src="./assets/img/icons/logo.svg" alt="Logo">
+          </a>
+          <button class="search">
+            <img src="./assets/img/icons/search.svg" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header__list">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <span class="nav__link">
+                <span>Demos</span>
+                <img src="./assets/img/icons/chevron-down.svg" alt="">
+              </span>
+            </li>
+            <li class="nav__item">
+              <span href="#" class="nav__link">
+                <span>Post</span>
+                <img src="./assets/img/icons/chevron-down.svg" alt="">
+              </span>
+              <ul class="nav__sublist">
+                <li class="nav__subitem">
+                  <a href="#" class="nav__sublink">
+                    <span>Post Header</span>
+                    <img src="./assets/img/icons/chevron-down.svg" alt="">
+                  </a>
+                </li>
+                <li class="nav__subitem">
+                  <a href="#" class="nav__sublink">
+                    <span>Post Layout</span>
+                    <img src="./assets/img/icons/chevron-down.svg" alt="">
+                  </a>
+                </li>
+                <li class="nav__subitem">
+                  <a href="#" class="nav__sublink">
+                    <span>Share Buttons</span>
+                    <img src="./assets/img/icons/chevron-down.svg" alt="">
+                  </a>
+                </li>
+                <li class="nav__subitem">
+                  <a href="#" class="nav__sublink">
+                    <span>Gallery Post</span>
+                    <img src="./assets/img/icons/chevron-down.svg" alt="">
+                  </a>
+                </li>
+                <li class="nav__subitem">
+                  <a href="#" class="nav__sublink">
+                    <span>Video Post</span>
+                    <img src="./assets/img/icons/chevron-down.svg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item">
+              <span href="#" class="nav__link">
+                <span>Features</span>
+                <img src="./assets/img/icons/chevron-down.svg" alt="">
+              </span>
+            </li>
+            <li class="nav__item">
+              <span href="#" class="nav__link">
+                <span>Categories</span>
+                <img src="./assets/img/icons/chevron-down.svg" alt="">
+              </span>
+            </li>
+            <li class="nav__item">
+              <span href="#" class="nav__link">
+                <span>Shop</span>
+                <img src="./assets/img/icons/chevron-down.svg" alt="">
+              </span>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span>Buy Now</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <div class="mobile-menu__inner">
+      <div class="mobile-menu__top">
+        <a href="/" class="logo">
+          <img src="./assets/img/icons/logo.svg" alt="Logo">
+        </a>
+        <button class="close">
+          <img src="./assets/img/icons/times.svg" alt="">
+        </button>
+      </div>
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">
+              <span>Demos</span>
+              <img src="./assets/img/icons/chevron-down.svg" alt="">
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">
+              <span>Post</span>
+              <img src="./assets/img/icons/chevron-down.svg" alt="">
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">
+              <span>Features</span>
+              <img src="./assets/img/icons/chevron-down.svg" alt="">
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">
+              <span>Categories</span>
+              <img src="./assets/img/icons/chevron-down.svg" alt="">
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">
+              <span>Shop</span>
+              <img src="./assets/img/icons/chevron-down.svg" alt="">
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">
+              <span>Buy Now</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <main class="main">
+    <section class="posts">
+      <div class="container">
+        <div class="posts__inner">
+          <!-- post 1 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Lifystyle</span>
+            <h3 class="post__title">Eat Right For Your Exercise Regime</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 2 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Lifystyle</span>
+            <h3 class="post__title">The Look: Perfect Balance</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 3 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Style</span>
+            <h3 class="post__title">Fun Things to Do in Rome</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 4 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Style</span>
+            <h3 class="post__title">24 Colorful Ceilings That Add Unexpected Contrast to Any Room</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 5 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Lifestyle</span>
+            <h3 class="post__title">9 New Songs to Heat Up Your Fall Playlist</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 6 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Events</span>
+            <h3 class="post__title">What You Need on Your Bedside Table</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 7 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Travel</span>
+            <h3 class="post__title">When Two Wheels Are Better Than Four</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 8 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Travel</span>
+            <h3 class="post__title">26 Living Room Ideas from the Homes of Top Designers</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+          <!-- post 9 -->
+          <article class="post">
+            <img class="post__image" src="./assets/img/content/post1_1x.jpg"
+              srcset="./assets/img/content/post1_1x.jpg 1x, ./assets/img/content/post1_2x.jpg 2x, ./assets/img/content/post1_3x.jpg 3x"
+              alt="Man in the street" />
+            <span class="post__category">Music</span>
+            <h3 class="post__title">What Makes Your City’s Style Unique</h3>
+            <div class="post__info">
+              <span class="post__author">Niek Bove</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__date">April 8, 2018</span>
+              <img src="./assets/img/icons/oval.svg" alt="">
+              <span class="post__views">3K Views</span>
+            </div>
+            <p class="post__preview">
+              Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport
+              detail. Warmth comfort hangs loosely from the body large pocket at the front full button…
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer class="footer"></footer>
 </body>
 

@@ -16,11 +16,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: u.$font;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  font-family: u.$fontRoboto;
+  background-color: var(--clr-white);
 }
 
 .container {
-  width: min(100% - u.rem(40), u.rem(1300));
+  width: min(100% - u.rem(40), u.rem(1180));
+  margin-inline: auto;
+}
+
+.main {
+  padding-top: u.rem(48);
 }
