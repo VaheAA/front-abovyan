@@ -104,6 +104,7 @@ a:active {
 
 button {
   background: none;
+  border: none;
 }
 
 /* Remove list styles (bullets/numbers) */
