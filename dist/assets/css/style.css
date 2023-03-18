@@ -93,7 +93,17 @@ a:active {
 
 a,
 button {
-  cursor: revert;
+  cursor: pointer;
+}
+
+a,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
 }
 
 /* Remove list styles (bullets/numbers) */
