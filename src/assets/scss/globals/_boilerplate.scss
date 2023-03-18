@@ -28,3 +28,7 @@ body {
 .main {
   padding-top: u.rem(48);
 }
+
+.no-scroll {
+  overflow-y: hidden;
+}

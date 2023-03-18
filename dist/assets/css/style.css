@@ -1,12 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;
+
+500;700&family=Roboto:wght@400;500;700&display=swap");
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -34,6 +28,10 @@ body {
 
 .main {
   padding-top: 3rem;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 h1,
@@ -75,16 +73,19 @@ a:active {
     The new CSS reset - version 1.7.3 (last updated 7.8.2022)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
+
 /*
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
+
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
 }
 
 /* Preferred box-sizing value */
+
 *,
 *::before,
 *::after {
@@ -92,12 +93,14 @@ a:active {
 }
 
 /* Reapply the pointer cursor for anchor tags */
+
 a,
 button {
   cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
+
 ol,
 ul,
 menu {
@@ -105,39 +108,55 @@ menu {
 }
 
 /* For images to not be able to exceed their container */
+
 img {
   max-width: 100%;
 }
 
 /* removes spacing between cells in tables */
+
 table {
   border-collapse: collapse;
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+
 input,
 textarea {
   -webkit-user-select: auto;
 }
 
 /* revert the 'white-space' property for textarea elements on Safari */
+
 textarea {
   white-space: revert;
 }
 
 /* minimum style to allow to style meter element */
+
 meter {
   -webkit-appearance: revert;
-  appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
 }
 
 /* reset default text opacity of input placeholder */
+
+::-moz-placeholder {
+  color: unset;
+}
+
+:-ms-input-placeholder {
+  color: unset;
+}
+
 ::placeholder {
   color: unset;
 }
 
 /* fix the feature of 'hidden' attribute.
  display:revert; revert to element instead of attribute */
+
 :where([hidden]) {
   display: none;
 }
@@ -145,6 +164,7 @@ meter {
 /* revert for bug in Chromium browsers
  - fix for the content editable attribute will work properly.
  - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+
 :where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
@@ -154,55 +174,47 @@ meter {
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
+
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
 .header {
   background-color: var(--clr-white);
-  transition: all 0.3s linear;
-}
-.header.sticky {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  width: 100%;
-  animation: slideDown 0.3s ease-out;
+  transition: all 0.3s linear;
 }
+
+.header.sticky {
+  transform: translateY(-100%);
+}
+
 .header__top {
   padding-block: 1.75rem;
 }
+
 .header__top-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .header .logo {
   display: block;
   text-align: center;
   margin-left: 42%;
 }
-@media (max-width: 43.74875em) {
-  .header .logo {
-    margin-left: 0;
-  }
-}
+
 .header__list {
   border-block: 1px solid var(--clr-light);
-}
-@media (max-width: 43.74875em) {
-  .header__list {
-    border: 0;
-  }
 }
 
 .nav {
   height: 57px;
 }
-@media (max-width: 43.74875em) {
-  .nav {
-    display: none;
-  }
-}
+
 .nav__list {
   display: flex;
   justify-content: center;
@@ -210,13 +222,16 @@ meter {
   align-items: center;
   height: 100%;
 }
+
 .nav__item {
   position: relative;
   height: 100%;
 }
+
 .nav__item:hover .nav__sublist {
   display: block;
 }
+
 .nav__link {
   display: inline-flex;
   align-items: center;
@@ -224,6 +239,7 @@ meter {
   font-weight: 700;
   line-height: 57px;
 }
+
 .nav__sublist {
   display: none;
   opacity: 1;
@@ -238,22 +254,27 @@ meter {
   z-index: 999;
   background-color: var(--clr-white);
 }
+
 .nav__subitem:not(:first-of-type) {
   padding-top: 0.5rem;
 }
+
 .nav__subitem:not(:last-of-type) {
   border-bottom: 1px solid var(--clr-light);
   padding-bottom: 0.5rem;
 }
+
 .nav__sublink {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8125rem;
 }
+
 .nav__sublink span {
   transition: all 0.3s ease;
 }
+
 .nav__sublink:hover span {
   transform: translateX(10px);
   color: var(--clr-text);
@@ -263,6 +284,7 @@ meter {
   display: block;
   cursor: pointer;
 }
+
 .search img {
   display: block;
 }
@@ -270,11 +292,6 @@ meter {
 .hamburger {
   display: none;
   cursor: pointer;
-}
-@media (max-width: 43.74875em) {
-  .hamburger {
-    display: block;
-  }
 }
 
 .close {
@@ -290,48 +307,55 @@ meter {
   right: 0;
   background-color: rgba(255, 255, 255, 0.65);
   transition: all 0.3s linear;
-  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
 }
-@media (max-width: 43.74875em) {
-  .mobile-menu {
-    display: block;
-    transform: translateX(-100%);
-  }
-}
+
 .mobile-menu.open {
   transform: translateX(0);
 }
+
 .mobile-menu__inner {
   width: 85%;
   height: 100%;
   border-right: 1px solid var(--clr-light);
   background-color: var(--clr-white);
 }
+
 .mobile-menu__top {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--clr-light);
   padding: 2rem 1.25rem;
 }
+
 .mobile-menu__nav {
   padding-top: 1.84375rem;
   padding-left: 1.25rem;
 }
+
 .mobile-menu__item {
   height: 100%;
 }
+
 .mobile-menu__item:not(:first-of-type) {
   border-top: 1px solid var(--clr-light);
 }
+
 .mobile-menu__item:not(:last-of-type) {
   border-bottom: 1px solid var(--clr-light);
 }
+
 .mobile-menu__link {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   font-weight: 700;
   height: 57px;
+}
+
+.posts {
+  padding-block: 1.25rem;
 }
 
 .posts__inner {
@@ -348,35 +372,66 @@ meter {
   width: 100%;
   flex: 0 1 22.5rem;
 }
+
 .post__image {
   display: block;
   width: 100%;
 }
+
 .post__category {
   display: inline-block;
   color: var(--clr-red);
   font-weight: 700;
   font-size: 0.8125rem;
 }
+
 .post__title {
   font-size: 1.5rem;
   line-height: 1.875rem;
 }
+
 .post__info {
   display: flex;
   gap: 10px;
   align-items: center;
 }
+
 .post__author {
   font-weight: 500;
   font-size: 0.75rem;
 }
-.post__date, .post__views {
+
+.post__date,
+.post__views {
   color: var(--clr-text);
   font-size: 0.75rem;
 }
+
 .post__preview {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--clr-text);
+}
+
+@media (max-width: 43.74875em) {
+  .header .logo {
+    margin-left: 0;
+  }
+
+  .header__list {
+    border: 0;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+    transform: translateX(-100%);
+  }
 }

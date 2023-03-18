@@ -1,6 +1,7 @@
 @use '../util' as u;
 
 .posts {
+  padding-block: u.rem(20);
 
   &__inner {
     display: flex;
